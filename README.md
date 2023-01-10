@@ -1,4 +1,6 @@
-<img src = "resources/InterSystemsXMTConnect.png" title = "InterSystemsXMTConnect" width = "40%"/>
+<img src = "https://raw.githubusercontent.com/phil1436/MTConnect-ObjectScript/master/resources/InterSystemsXMtConnect.png?token=GHSAT0AAAAAAB3XARBN4NUSO6XMJQAPOV44Y55FUDQ" title = "InterSystemsXMTConnect" width = "40%"/>
+<img src = "resources/InterSystemsXMtConnect.png" width = "40%"/>
+
 
 # MTConnect-ObjectScript
 
