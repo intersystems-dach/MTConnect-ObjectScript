@@ -58,24 +58,12 @@ Property LogFile As %String(MAXLEN = 1000);
 /// A Logger to write the log
 Property Logger As MTConnect.Logger [ Private ];
 
-/// Only used for testcases
-Method test(ByRef req As MTConnect.MSG.MTConnectRequest) [ Private ]
-{
-    Set req.current = "C:\Users\pbonin\Downloads\current.xml"
-    Set req.probe = "C:\Users\pbonin\Downloads\probe.xml"
-    Set req.probeFromFile = 1
-    Set req.currentToFile = 1
-}
-
 /// Builds the class if it does not exists and inserts current data
 /// <li>pRequest: The Request</li>
 /// <li>pResponse: The Response</li>
 /// <li><b>returns</b>: If the class could be build</li>
 Method Execute(pRequest As MTConnect.MSG.MTConnectRequest, Output pResponse As MTConnect.MSG.MTConnectResponse) As %Status
 {
-
-    Do ..test(.pRequest)
-
 
     //Setup Logger
     If ..Log{
