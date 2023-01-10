@@ -1,3 +1,5 @@
+<img src = "resources/InterSystemsXMTConnect.png" title = "InterSystemsXMTConnect" width = "40%"/>
+
 # MTConnect-ObjectScript
 
 An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GCOS_INTRO) implementation, thats builds an ObjectScript Class based on a [MTConnect](https://www.mtconnect.org/) probe file and adds data from a current file.
@@ -16,7 +18,7 @@ An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docb
 
 ---
 
-## [MTConnect.MSG.MTConnectRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/MTConnect/MSG/MTConnectRequest.cls) / [Response](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/MTConnect/MSG/MTConnectResponse.cls)
+## [MTConnect.MSG.MTConnectRequest](cls/MTConnect/MSG/MTConnectRequest.cls) / [Response](cls/MTConnect/MSG/MTConnectResponse.cls)
 
 * `probe`: Holds the data from the probe file.
 * `probeFromFile`: When enabled the probe property contains an absolute path to the probe file. When disabled the probe property contains the probe file as a string.
@@ -28,17 +30,17 @@ An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docb
 
 ---
 
-## [MTConnect.BO.ClassBuilder](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/MTConnect/BO/ClassBuilder.cls)
+## [MTConnect.BO.ClassBuilder](cls/MTConnect/BO/ClassBuilder.cls)
 
 A Business Operation, that builts an ObjectScript class based on a MTConnect probe file. After the class is successfully generated, the operation inserts data from a MTConnect current file.
 
 ### Request
 
-[MTConnect.MSG.MTConnectRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/MTConnect/MSG/MTConnectRequest.cls)
+[MTConnect.MSG.MTConnectRequest](cls/MTConnect/MSG/MTConnectRequest.cls)
 
 ### Response
 
-[MTConnect.MSG.MTConnectResponse](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/MTConnect/MSG/MTConnectResponse.cls)
+[MTConnect.MSG.MTConnectResponse](cls/MTConnect/MSG/MTConnectResponse.cls)
 
 ### Settings
 
@@ -66,7 +68,7 @@ A Business Operation, that builts an ObjectScript class based on a MTConnect pro
 
 ---
 
-## [MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/MTConnect/MSG/CreateDataTypeRequest.cls)
+## [MTConnect.MSG.CreateDataTypeRequest](cls/MTConnect/MSG/CreateDataTypeRequest.cls)
 
 * `Name`: The name of the datatype.
 * `Unit`: The unit to display the datatype with.
@@ -77,9 +79,9 @@ A Business Operation, that builts an ObjectScript class based on a MTConnect pro
 
 ---
 
-## [MTConnect.DataTypesBuilder](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/MTConnect/DataTypesBuilder.cls) / [Operation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/MTConnect/BO/DataTypesBuilderOperation.cls)
+## [MTConnect.DataTypesBuilder](cls/MTConnect/DataTypesBuilder.cls) / [Operation](cls/MTConnect/BO/DataTypesBuilderOperation.cls)
 
-Builds MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/MTConnect/MSG/CreateDataTypeRequest.cls).
+Builds MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](cls/MTConnect/MSG/CreateDataTypeRequest.cls).
 
 ### Methods
 
