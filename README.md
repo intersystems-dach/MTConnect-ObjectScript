@@ -6,6 +6,7 @@ An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docb
 
 ---
 
+* [Installation](#installation)
 * [MTConnect.MSG.MTConnectRequest / Response](#mtconnectmsgmtconnectrequest--response)
 * [MTConnect.BO.ClassBuilder](#mtconnectboclassbuilder)
   * [Request](#request)
@@ -15,6 +16,20 @@ An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docb
 * [MTConnect.DataTypesBuilder / Operation](#mtconnectdatatypesbuilder--operation)
 * [Bugs](#bugs)
 * [Release Notes](#release-notes)
+
+---
+
+## Installation
+
+* Download the [latest realease](https://github.com/phil1436/MTConnect-ObjectScript/releases/latest)
+* Extract the file
+* In the [InterSystems Management Portal](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSA_USING_PORTAL) navigate to `System Explorer > Classes`
+* Click on `Import`
+* Under *Import from File or a Directory* make sure to select *Directory*
+* Enter the path to the [MTConnect Folder](cls/MTConnect) under `cls/MTConnect`
+* Click on `Import`
+
+![ImportClassesScreenshot](resources/ImportClassesScreenshot.png)
 
 ---
 
@@ -96,6 +111,10 @@ Builds MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](cls/
 ---
 
 ## [Release Notes](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/CHANGELOG.md)
+
+<!-- ### [v0.0.2](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.2)
+
+*  -->
 
 ## [v0.0.1](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.1)
 
