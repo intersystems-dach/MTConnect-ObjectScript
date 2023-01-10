@@ -29,7 +29,7 @@ An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docb
 * Enter the path to the [MTConnect Folder](cls/MTConnect) under `cls/MTConnect`
 * Click on `Import`
 
-![ImportClassesScreenshot](resources/ImportClassesScreenshot.png)
+<img src="resources/ImportClassesScreenshot.png" title ="ImportClassesScreenshot" width = "60%"/>
 
 ---
 
