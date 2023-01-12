@@ -107,9 +107,9 @@ Builds MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](cls/
 
 ---
 
-## [Example Production](cls\MTConnect\ExampleProduction)
+## [Example Production](cls/MTConnect/ExampleProduction)
 
-A simple [Production](cls\MTConnect\ExampleProduction\Production.cls) to show the usage of the [DataTypesBuilder Operation](cls\MTConnect\BO\DataTypesBuilderOperation.cls) and the [ClassBuilder Operation](cls\MTConnect\BO\ClassBuilder.cls).
+A simple [Production](cls/MTConnect/ExampleProduction/Production.cls) to show the usage of the [DataTypesBuilder Operation](cls/MTConnect/BO/DataTypesBuilderOperation.cls) and the [ClassBuilder Operation](cls/MTConnect/BO/ClassBuilder.cls).
 
 How to open and start the Production:
 
@@ -121,7 +121,7 @@ How to open and start the Production:
 
 ### DataTypes
 
-An example for how to use the [DataTypesBuilder Operation](cls\MTConnect\BO\DataTypesBuilderOperation.cls) to create MTConnect DataTypes.
+An example for how to use the [DataTypesBuilder Operation](cls/MTConnect/BO/DataTypesBuilderOperation.cls) to create MTConnect DataTypes.
 
 * From the *category* dropdown menu choose `DataTypes`
 * Choose the `DataTypes Process`
@@ -134,11 +134,11 @@ An example for how to use the [DataTypesBuilder Operation](cls\MTConnect\BO\Data
 * You can follow the *Visual Trace* to see how the DataType was created
 * You will find the DataTypes under `MTConnect.ExampleProduction.DataTypes`
 
-![resources\ExampleProductionDataTypesDemo](resources\ExampleProductionDataTypesDemo.gif)
+![resources/ExampleProductionDataTypesDemo](resources/ExampleProductionDataTypesDemo.gif)
 
 ### Class Builder
 
-An example for how to use the [ClassBuilder Operation](cls\MTConnect\BO\ClassBuilder.cls) to create MTConnect Class from a MTConnect [Probe](http://mtconnect.mazakcorp.com:5609/probe) and [Current](http://mtconnect.mazakcorp.com:5609/current) file.
+An example for how to use the [ClassBuilder Operation](cls/MTConnect/BO/ClassBuilder.cls) to create MTConnect Class from a MTConnect [Probe](http://mtconnect.mazakcorp.com:5609/probe) and [Current](http://mtconnect.mazakcorp.com:5609/current) file.
 
 * From the *category* dropdown menu choose `Class Builder`
 * Choose the `Class Builder Process`
@@ -149,7 +149,7 @@ An example for how to use the [ClassBuilder Operation](cls\MTConnect\BO\ClassBui
 * You will find the MTConnect Class under `MTConnect.ExampleProduction.BuiltClasses`
 * The Operation will also generate MTConnect DataTypes based on the files. You can find them under `MTConnect.ExampleProduction.DataTypes`
 
-![resources\ExampleProductionClassBuilderDemo](resources\ExampleProductionClassBuilderDemo.gif)
+![resources/ExampleProductionClassBuilderDemo](resources/ExampleProductionClassBuilderDemo.gif)
 
 ---
 
