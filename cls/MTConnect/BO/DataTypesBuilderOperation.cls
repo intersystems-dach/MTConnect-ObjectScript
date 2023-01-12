@@ -1,4 +1,4 @@
-/// v1.0 <br>
+/// v1.1 <br>
 /// Creates a MTConnect Datatype based on a <CLASS>MTConnect.MSG.CreateDataTypeRequest</CLASS>.
 /// Currently only works with %String and %Double.
 Class MTConnect.BO.DataTypesBuilderOperation Extends Ens.BusinessOperation
@@ -32,6 +32,14 @@ Method Execute(pRequest As MTConnect.MSG.CreateDataTypeRequest, Output pResponse
 {
     #dim tSc as %Status = $$$OK
     Set className =..Package_"."_pRequest.Name
+    //check if class already exists
+    If ##class(%Dictionary.CompiledClass).%ExistsId(className){
+
+        Set pResponse = ##class(Ens.StringResponse).%New()
+        Set pResponse.StringValue = className_" already exists"
+
+        Return $$$ERROR(className_" already exists")
+    }
      //Define Class
 	Set cdef = ##class(%Dictionary.ClassDefinition).%New(className)
  	If $SYSTEM.Status.IsError(cdef) {
