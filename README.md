@@ -14,6 +14,9 @@ An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docb
   * [Settings](#settings)
 * [MTConnect.MSG.CreateDataTypeRequest](#mtconnectmsgcreatedatatyperequest)
 * [MTConnect.DataTypesBuilder / Operation](#mtconnectdatatypesbuilder--operation)
+* [Example Production](#example-production)
+  * [DataTypes](#datatypes)
+  * [Class Builder](#class-builder)
 * [Bugs](#bugs)
 * [Release Notes](#release-notes)
 
@@ -104,6 +107,52 @@ Builds MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](cls/
 
 ---
 
+## [Example Production](cls\MTConnect\ExampleProduction)
+
+A simple [Production](cls\MTConnect\ExampleProduction\Production.cls) to show the usage of the [DataTypesBuilder Operation](cls\MTConnect\BO\DataTypesBuilderOperation.cls) and the [ClassBuilder Operation](cls\MTConnect\BO\ClassBuilder.cls).
+
+How to open and start the Production:
+
+* In the InterSystems Management Portal navigate to `Interoperabilty > Configure > Production > Go`
+* Click on `Production Settings`
+* Navigate to `Actions > Open`
+* Choose `MTConnect > ExampleProduction > Production > Go`
+* Click on `Start`
+
+### DataTypes
+
+An example for how to use the [DataTypesBuilder Operation](cls\MTConnect\BO\DataTypesBuilderOperation.cls) to create MTConnect DataTypes.
+
+* From the *category* dropdown menu choose `DataTypes`
+* Choose the `DataTypes Process`
+* Navigate to `Actions > Test`
+* From the *Request Type* dropdown menu choose `Ens.StringRequest`
+  * Type in the `StringValue` field *String* to generate a String MTConnect DataType
+  **OR**
+  * Type in the `StringValue` field *Double* to generate a Double MTConnect DataType
+* Click on `Invoke Testing Service`
+* You can follow the *Visual Trace* to see how the DataType was created
+* You will find the DataTypes under `MTConnect.ExampleProduction.DataTypes`
+
+![resources\ExampleProductionDataTypesDemo](resources\ExampleProductionDataTypesDemo.gif)
+
+### Class Builder
+
+An example for how to use the [ClassBuilder Operation](cls\MTConnect\BO\ClassBuilder.cls) to create MTConnect Class from a MTConnect [Probe](http://mtconnect.mazakcorp.com:5609/probe) and [Current](http://mtconnect.mazakcorp.com:5609/current) file.
+
+* From the *category* dropdown menu choose `Class Builder`
+* Choose the `Class Builder Process`
+* Navigate to `Actions > Test`
+* From the *Request Type* dropdown menu choose `Ens.Request`
+* Click on `Invoke Testing Service`
+* You can follow the *Visual Trace* to see how the MTConnect Class was created
+* You will find the MTConnect Class under `MTConnect.ExampleProduction.BuiltClasses`
+* The Operation will also generate MTConnect DataTypes based on the files. You can find them under `MTConnect.ExampleProduction.DataTypes`
+
+![resources\ExampleProductionClassBuilderDemo](resources\ExampleProductionClassBuilderDemo.gif)
+
+---
+
 ## Bugs
 
 * *no known bugs*
@@ -112,13 +161,9 @@ Builds MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](cls/
 
 ## [Release Notes](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/CHANGELOG.md)
 
-<!-- ### [v0.0.2](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.2)
+### [v0.0.2](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.2)
 
-*  -->
-
-## [v0.0.1](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.1)
-
-* *Initial release*
+### [v0.0.1](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.1)
 
 ---
 
