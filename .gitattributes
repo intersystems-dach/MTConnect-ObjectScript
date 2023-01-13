@@ -1,1 +1,2 @@
-resources/** export-ignore
+*.gif export-ignore
+*.png export-ignore
