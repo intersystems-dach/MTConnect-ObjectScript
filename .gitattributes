@@ -1,2 +1,4 @@
-*.gif export-ignore
-*.png export-ignore
+#*.gif export-ignore
+#*.png export-ignore
+resources/** export-ignore
+.git* export-ignore
