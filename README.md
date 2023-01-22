@@ -167,7 +167,7 @@ An example for how to use the [ClassBuilder Operation](cls/MTConnect/BO/ClassBui
 
 ---
 
-by Philipp B.
+by Jannis S. & Philipp B.
 
 powered by [InterSystems](https://www.intersystems.com/).
 
