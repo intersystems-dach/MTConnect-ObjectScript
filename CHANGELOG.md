@@ -2,6 +2,12 @@
 
 ---
 
+## [v0.0.3](https://github.com/phil1436/RepoName/tree/0.0.3) (2023-1-23)
+
+* Bug fixes
+
+---
+
 ## [v0.0.2](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.2) (2023-1-12)
 
 * [DataTypesBuilderOperation](cls/MTConnect/BO/DataTypesBuilderOperation.cls) throws an error if the class already exists
