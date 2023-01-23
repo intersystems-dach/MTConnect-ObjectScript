@@ -1,4 +1,4 @@
-/// v1.1 <br>
+/// v1.2 <br>
 /// Creates a MTConnect Datatype based on a <CLASS>MTConnect.MSG.CreateDataTypeRequest</CLASS>.
 /// Currently only works with %String and %Double.
 Class MTConnect.BO.DataTypesBuilderOperation Extends Ens.BusinessOperation
@@ -86,10 +86,10 @@ Method Execute(pRequest As MTConnect.MSG.CreateDataTypeRequest, Output pResponse
     Set pResponse = ##class(Ens.StringResponse).%New()
 
     If tSc{
-        Set pResponse.StringValue = className_" created"
+        Set pResponse.StringValue = className_" created!"
     }
     Else{
-        Set pResponse.StringValue = className_" could not be created"
+        Set pResponse.StringValue = className_" could not be created!"
     }
     Return tSc
 }
@@ -120,6 +120,23 @@ Method InsertIsValid(cdef As %Dictionary.ClassDefinition, className As %String, 
         Set mdef.Implementation.LineTerminator = $C(13,10)
         Do mdef.Implementation.WriteLine("	If '$ISVALIDDOUBLE(%val){")
         Do mdef.Implementation.WriteLine("	    Return $$$ERROR(%val_"" is not a valid Double!"")")
+        Do mdef.Implementation.WriteLine("	}")
+        If pRequest.AllowedNumericMaxValue '= ""{
+            Do mdef.Implementation.WriteLine("	If %val > "_pRequest.AllowedNumericMaxValue_"{")
+            Do mdef.Implementation.WriteLine("	    Return $$$ERROR(%val_"" is higher than allowed: "_pRequest.AllowedNumericMaxValue_""")")
+            Do mdef.Implementation.WriteLine("	}")
+        }
+        If pRequest.AllowedNumericMinValue '= ""{
+            Do mdef.Implementation.WriteLine("	If %val < "_pRequest.AllowedNumericMinValue_"{")
+            Do mdef.Implementation.WriteLine("	    Return $$$ERROR(%val_"" is lower than allowed: "_pRequest.AllowedNumericMinValue_""")")
+            Do mdef.Implementation.WriteLine("	}")
+        }
+        Do mdef.Implementation.WriteLine("	Return $$$OK")
+    }
+    ElseIf pRequest.DataType = "%Integer"{
+        Set mdef.Implementation.LineTerminator = $C(13,10)
+        Do mdef.Implementation.WriteLine("	If '$ISVALIDNUM(%val){")
+        Do mdef.Implementation.WriteLine("	    Return $$$ERROR(%val_"" is not a valid Integer!"")")
         Do mdef.Implementation.WriteLine("	}")
         If pRequest.AllowedNumericMaxValue '= ""{
             Do mdef.Implementation.WriteLine("	If %val > "_pRequest.AllowedNumericMaxValue_"{")
@@ -196,7 +213,7 @@ Method InsertDisplayToLogical(cdef As %Dictionary.ClassDefinition, className As 
     //Add parameter
 	Do mdef.FormalSpecSet("%val:%String")
     //Add returntype
-    If pRequest.DataType = "%Double"{
+    If pRequest.DataType = "%Double" || pRequest.DataType = "%Integer"{
 	    Set mdef.ReturnType  = pRequest.DataType
     }
     Else{

@@ -22,7 +22,7 @@ XData ProductionDefinition
     <Setting Target="Host" Name="Normalize">1</Setting>
     <Setting Target="Host" Name="Package">MTConnect.ExampleProduction.DataTypes</Setting>
   </Item>
-  <Item Name="DataTypes Process" Category="DataTypes" ClassName="MTConnect.ExampleProduction.BP.DataTypesProcess" PoolSize="1" Enabled="true" Foreground="false" Comment="Test this process with Ens.StringRequest and StringValue to &quot;String&quot; to generate a example String DataType or to &quot;Double&quot; to create a example Double DataType. 
+  <Item Name="DataTypes Process" Category="DataTypes" ClassName="MTConnect.ExampleProduction.BP.DataTypesProcess" PoolSize="1" Enabled="false" Foreground="false" Comment="Test this process with Ens.StringRequest and StringValue to &quot;String&quot; to generate a example String DataType or to &quot;Integer&quot; to create a example Integer DataType or to &quot;Double&quot; to create a example Double DataType. 
 You can find the generated DataTypes under MTConnect.ExampleProduction.DataTypes." LogTraceEvents="false" Schedule="">
     <Setting Target="Host" Name="foo">Test</Setting>
   </Item>

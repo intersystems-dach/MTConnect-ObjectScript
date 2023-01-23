@@ -1,4 +1,4 @@
-/// v1.0 <br>
+/// v1.1 <br>
 /// Creates a MTConnect Datatype based on a <CLASS>MTConnect.MSG.CreateDataTypeRequest</CLASS>.
 /// Currently only works with %String and %Double.
 Class MTConnect.DataTypesBuilder [ Abstract ]
@@ -103,6 +103,23 @@ ClassMethod InsertIsValid(cdef As %Dictionary.ClassDefinition, className As %Str
         }
         Do mdef.Implementation.WriteLine("	Return $$$OK")
     }
+    ElseIf pRequest.DataType = "%Integer"{
+        Set mdef.Implementation.LineTerminator = $C(13,10)
+        Do mdef.Implementation.WriteLine("	If '$ISVALIDNUM(%val){")
+        Do mdef.Implementation.WriteLine("	    Return $$$ERROR(%val_"" is not a valid Integer!"")")
+        Do mdef.Implementation.WriteLine("	}")
+        If pRequest.AllowedNumericMaxValue '= ""{
+            Do mdef.Implementation.WriteLine("	If %val > "_pRequest.AllowedNumericMaxValue_"{")
+            Do mdef.Implementation.WriteLine("	    Return $$$ERROR(%val_"" is higher than allowed: "_pRequest.AllowedNumericMaxValue_""")")
+            Do mdef.Implementation.WriteLine("	}")
+        }
+        If pRequest.AllowedNumericMinValue '= ""{
+            Do mdef.Implementation.WriteLine("	If %val < "_pRequest.AllowedNumericMinValue_"{")
+            Do mdef.Implementation.WriteLine("	    Return $$$ERROR(%val_"" is lower than allowed: "_pRequest.AllowedNumericMinValue_""")")
+            Do mdef.Implementation.WriteLine("	}")
+        }
+        Do mdef.Implementation.WriteLine("	Return $$$OK")
+    }
     ElseIf pRequest.DataType = "%String"{
         Set mdef.Implementation.LineTerminator = $C(13,10)
         If pRequest.AllowedStringValues = ""{
@@ -166,7 +183,8 @@ ClassMethod InsertDisplayToLogical(cdef As %Dictionary.ClassDefinition, classNam
     //Add parameter
 	Do mdef.FormalSpecSet("%val:%String")
     //Add returntype
-    If pRequest.DataType = "%Double"{
+    If pRequest.DataType = "%Double" || pRequest.DataType = "%Integer"{
+
 	    Set mdef.ReturnType  = pRequest.DataType
     }
     Else{

@@ -1,4 +1,4 @@
-/// v1.0 <br>
+/// v1.1 <br>
 /// A request class for <CLASS>MTConnect.BO.DataTypesBuilder</CLASS>.
 Class MTConnect.MSG.CreateDataTypeRequest Extends Ens.Request
 {
@@ -10,7 +10,7 @@ Property Name As %String(MAXLEN = 1000000);
 Property Unit As %String(MAXLEN = 1000000);
 
 /// The primitive datatype
-Property DataType As %String(MAXLEN = 100, VALUELIST = ",%String,%Double") [ InitialExpression = "%String" ];
+Property DataType As %String(MAXLEN = 100, VALUELIST = ",%String,%Double,%Integer") [ InitialExpression = "%String" ];
 
 /// Comma seperated allowed string values (only used if DataType is %String)
 Property AllowedStringValues As %String(MAXLEN = 1000000);
@@ -18,7 +18,7 @@ Property AllowedStringValues As %String(MAXLEN = 1000000);
 /// The maximum value that is allowed (is included) (only used if DataType is %Double)
 Property AllowedNumericMaxValue As %Double;
 
-/// The minimum value that is allowed (is included) (only used if DataType is %Double)
+/// The minimum value that is allowed (is included) (only used if DataType is %Double or %Integer)
 Property AllowedNumericMinValue As %Double;
 
 Storage Default
