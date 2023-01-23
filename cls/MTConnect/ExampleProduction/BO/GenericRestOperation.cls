@@ -1,9 +1,9 @@
 Class MTConnect.ExampleProduction.BO.GenericRestOperation Extends EnsLib.REST.Operation
 {
 
-Parameter ADAPTER = "MTConnect.OutboundAdapter.GenericRestOutboundAdapter";
+Parameter ADAPTER = "MTConnect.ExampleProduction.OutboundAdapter.GenericRestOutboundAdapter";
 
-Property Adapter As MTConnect.OutboundAdapter.GenericRestOutboundAdapter;
+Property Adapter As MTConnect.ExampleProduction.OutboundAdapter.GenericRestOutboundAdapter;
 
 Parameter INVOCATION = "Queue";
 
