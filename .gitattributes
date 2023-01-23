@@ -3,3 +3,5 @@
 resources/** export-ignore
 resources export-ignore
 .git* export-ignore
+CHANGELOG.md export-ignore
+README.md export-ignore
