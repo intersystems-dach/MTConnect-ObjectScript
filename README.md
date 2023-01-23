@@ -44,7 +44,6 @@ An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docb
 * `currentToFile`: When enabled the current property contains an absolute path to the current file. When disabled the current property contains the current file as a string.
 * `recievedLine`(optional): Holds a received string. (Used for *cleardata*)
 * `className`(will be set): The complete class name of the generated class.
-* `logClass`(will be set): The complete class name of the log class(will not be used!).
 
 ---
 
@@ -90,20 +89,51 @@ A Business Operation, that builts an ObjectScript class based on a MTConnect pro
 
 * `Name`: The name of the datatype.
 * `Unit`: The unit to display the datatype with.
-* `DataType`: The underlying ObjectScript type (Currently only works with *%String* and *%Double*).
+* `DataType`: The underlying ObjectScript type (Currently only works with *%String*, *%Integer* and *%Double*).
 * `AllowedStringValues`: Comma separated list for the allowed values. If left empty all values will be allowed. (only used when `DataType` is *%String*)
-* `AllowedNumericMaxValue`: The maximum value that is allowed. If left empty all values will be allowed. (only used when `DataType` is *%Double*)
-* `AllowedNumericMinValue`: The minimum value that is allowed. If left empty all values will be allowed. (only used when `DataType` is *%Double*)
+* `AllowedNumericMaxValue`: The maximum value that is allowed. If left empty all values will be allowed. (only used when `DataType` is *%Double* or *%Integer*)
+* `AllowedNumericMinValue`: The minimum value that is allowed. If left empty all values will be allowed. (only used when `DataType` is *%Double* or *%Integer*)
 
 ---
 
-## [MTConnect.DataTypesBuilder](cls/MTConnect/DataTypesBuilder.cls) / [Operation](cls/MTConnect/BO/DataTypesBuilderOperation.cls)
+## [MTConnect.DataTypesBuilder](cls/MTConnect/DataTypesBuilder.cls)
 
 Builds MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](cls/MTConnect/MSG/CreateDataTypeRequest.cls).
 
-### Methods
+### Execute Method
 
-* `Execute`: Builds the datatype.
+* `pRequest`: The [MTConnect.MSG.CreateDataTypeRequest](cls/MTConnect/MSG/CreateDataTypeRequest.cls)
+* `pPackage`: The package name to store the datatypes (Default is *MTConnect.DataTypes*)
+* `pGenerateIsValid`: If enabled generates the *IsValid* method for the datatype (enabled by default)
+* `pGenerateNormalize`: If enabled generates the *Normalize* method for the datatype (enabled by default)
+* `pGenerateDisplayToLogical`: If enabled generates the *DisplayToLogical* method for the datatype (enabled by default)
+* `pGenerateLogicalToDisplay`: If enabled generates the *LogicalToDisplay* method for the datatype (enabled by default)
+
+---
+
+## [MTConnect.BO.DataTypesBuilderOperation](cls/MTConnect/BO/DataTypesBuilderOperation.cls)
+
+A Business Operation to build MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](cls/MTConnect/MSG/CreateDataTypeRequest.cls).
+
+### Request
+
+[MTConnect.MSG.CreateDataTypeRequest](cls\MTConnect\MSG\CreateDataTypeRequest.cls)
+
+### Response
+
+[Ens.StringResponse](https://docs.intersystems.com/irislatest/csp/documatic/%25CSP.Documatic.cls?LIBRARY=ENSLIB&CLASSNAME=Ens.StringResponse)
+
+### Settings
+
+#### DataType
+
+* `Package`: The package name to store the datatypes (Default is *MTConnect.DataTypes*)
+* `IsValid`: If enabled generates the *IsValid* method for the datatype
+* `Normalize`: If enabled generates the *Normalize* method for the datatype
+* `DisplayToLogical`: If enabled generates the *DisplayToLogical* method for the datatype
+* `LogicalToDisplay`: If enabled generates the *LogicalToDisplay* method for the datatype
+
+> Tip: Hava a look at [MTConnect.DataTypes](cls/MTConnect/DataTypes) for some default MTConnect DataTypes.
 
 ---
 
@@ -130,6 +160,8 @@ An example for how to use the [DataTypesBuilder Operation](cls/MTConnect/BO/Data
   * Type in the `StringValue` field *String* to generate a String MTConnect DataType
   **OR**
   * Type in the `StringValue` field *Double* to generate a Double MTConnect DataType
+  **OR**
+  * Type in the `StringValue` field *Inetger* to generate a Integer MTConnect DataType
 * Click on `Invoke Testing Service`
 * You can follow the *Visual Trace* to see how the DataType was created
 * You will find the DataTypes under `MTConnect.ExampleProduction.DataTypes`
@@ -163,7 +195,7 @@ An example for how to use the [ClassBuilder Operation](cls/MTConnect/BO/ClassBui
 
 ### [v0.0.3](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.3)
 
-### [v0.0.2](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.2)
+### [v0.0.2](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.2) ⚠️**BROKEN**⚠️
 
 ### [v0.0.1](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.1)
 
