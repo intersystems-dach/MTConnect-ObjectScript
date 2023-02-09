@@ -199,4 +199,4 @@ by Jannis S. & Philipp B.
 
 powered by [InterSystems](https://www.intersystems.com/).
 
-_This application is **not** supported by InterSystems Corporation._
+<!--_This application is **not** supported by InterSystems Corporation._-->
