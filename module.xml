@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+    <Document name="mtconnect-objectscript.ZPM">
+        <Module>
+            <Name>mtconnect-objectscript</Name>
+            <Version>0.0.4</Version>
+            <Description>An Intersystems ObjectScript Implementation for the MTConnect standard.</Description>
+            <Packaging>module</Packaging>
+            <SourcesRoot>src</SourcesRoot>
+            <Resource Name="MTConnect.PKG"/>
+        </Module>
+    </Document>
+</Export>
