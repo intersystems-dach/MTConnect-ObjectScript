@@ -27,14 +27,14 @@ An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docb
 -   In the [InterSystems Management Portal](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GSA_USING_PORTAL) navigate to `System Explorer > Classes`
 -   Click on `Import`
 -   Under _Import from File or a Directory_ make sure to select _Directory_
--   Enter the path to the [MTConnect Folder](https://github.com/phil1436/MTConnect-ObjectScript/tree/master/cls/MTConnect) under `cls/MTConnect`
+-   Enter the path to the [MTConnect Folder](https://github.com/phil1436/MTConnect-ObjectScript/tree/master/src/cls/MTConnect) under `src/cls/MTConnect`
 -   Click on `Import`
 
 <img src="https://raw.githubusercontent.com/phil1436/MTConnect-ObjectScript/master/resources/ImportClassesScreenshot.png" title ="ImportClassesScreenshot" width = "60%"/>
 
 ---
 
-## [MTConnect.MSG.MTConnectRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/MSG/MTConnectRequest.cls) / [Response](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/MSG/MTConnectResponse.cls)
+## [MTConnect.MSG.MTConnectRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/MTConnectRequest.cls) / [Response](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/MTConnectResponse.cls)
 
 -   `probe`: Holds the data from the probe file.
 -   `probeFromFile`: When enabled the probe property contains an absolute path to the probe file. When disabled the probe property contains the probe file as a string.
@@ -45,17 +45,17 @@ An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docb
 
 ---
 
-## [MTConnect.BO.ClassBuilder](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/BO/ClassBuilder.cls)
+## [MTConnect.BO.ClassBuilder](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/BO/ClassBuilder.cls)
 
 A Business Operation, that builts an ObjectScript class based on a MTConnect probe file. After the class is successfully generated, the operation inserts data from a MTConnect current file.
 
 ### Request
 
-[MTConnect.MSG.MTConnectRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/MSG/MTConnectRequest.cls)
+[MTConnect.MSG.MTConnectRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/MTConnectRequest.cls)
 
 ### Response
 
-[MTConnect.MSG.MTConnectResponse](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/MSG/MTConnectResponse.cls)
+[MTConnect.MSG.MTConnectResponse](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/MTConnectResponse.cls)
 
 ### Settings
 
@@ -83,7 +83,7 @@ A Business Operation, that builts an ObjectScript class based on a MTConnect pro
 
 ---
 
-## [MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/MSG/CreateDataTypeRequest.cls)
+## [MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/CreateDataTypeRequest.cls)
 
 -   `Name`: The name of the datatype.
 -   `Unit`: The unit to display the datatype with.
@@ -94,13 +94,13 @@ A Business Operation, that builts an ObjectScript class based on a MTConnect pro
 
 ---
 
-## [MTConnect.DataTypesBuilder](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/DataTypesBuilder.cls)
+## [MTConnect.DataTypesBuilder](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/DataTypesBuilder.cls)
 
 Builds MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/MSG/CreateDataTypeRequest.cls).
 
 ### Execute Method
 
--   `pRequest`: The [MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/MSG/CreateDataTypeRequest.cls)
+-   `pRequest`: The [MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/CreateDataTypeRequest.cls)
 -   `pPackage`: The package name to store the datatypes (Default is _MTConnect.DataTypes_)
 -   `pGenerateIsValid`: If enabled generates the _IsValid_ method for the datatype (enabled by default)
 -   `pGenerateNormalize`: If enabled generates the _Normalize_ method for the datatype (enabled by default)
@@ -109,13 +109,13 @@ Builds MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](http
 
 ---
 
-## [MTConnect.BO.DataTypesBuilderOperation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/BO/DataTypesBuilderOperation.cls)
+## [MTConnect.BO.DataTypesBuilderOperation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/BO/DataTypesBuilderOperation.cls)
 
-A Business Operation to build MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/MSG/CreateDataTypeRequest.cls).
+A Business Operation to build MTConnect Datatypes based on a [MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/CreateDataTypeRequest.cls).
 
 ### Request
 
-[MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/MSG/CreateDataTypeRequest.cls)
+[MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/CreateDataTypeRequest.cls)
 
 ### Response
 
@@ -131,13 +131,13 @@ A Business Operation to build MTConnect Datatypes based on a [MTConnect.MSG.Crea
 -   `DisplayToLogical`: If enabled generates the _DisplayToLogical_ method for the datatype
 -   `LogicalToDisplay`: If enabled generates the _LogicalToDisplay_ method for the datatype
 
-> Tip: Hava a look at [MTConnect.DataTypes](https://github.com/phil1436/MTConnect-ObjectScript/tree/master/cls/MTConnect/DataTypes) for some default MTConnect DataTypes.
+> Tip: Hava a look at [MTConnect.DataTypes](https://github.com/phil1436/MTConnect-ObjectScript/tree/master/src/cls/MTConnect/DataTypes) for some default MTConnect DataTypes.
 
 ---
 
-## [Example Production](https://github.com/phil1436/MTConnect-ObjectScript/tree/master/cls/MTConnect/ExampleProduction)
+## [Example Production](https://github.com/phil1436/MTConnect-ObjectScript/tree/master/src/cls/MTConnect/ExampleProduction)
 
-A simple [Production](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/ExampleProduction/Production.cls) to show the usage of the [DataTypesBuilder Operation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/BO/DataTypesBuilderOperation.cls) and the [ClassBuilder Operation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/BO/ClassBuilder.cls).
+A simple [Production](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/ExampleProduction/Production.cls) to show the usage of the [DataTypesBuilder Operation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/BO/DataTypesBuilderOperation.cls) and the [ClassBuilder Operation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/BO/ClassBuilder.cls).
 
 How to open and start the Production:
 
@@ -149,7 +149,7 @@ How to open and start the Production:
 
 ### DataTypes
 
-An example for how to use the [DataTypesBuilder Operation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/BO/DataTypesBuilderOperation.cls) to create MTConnect DataTypes.
+An example for how to use the [DataTypesBuilder Operation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/BO/DataTypesBuilderOperation.cls) to create MTConnect DataTypes.
 
 -   From the _category_ dropdown menu choose `DataTypes`
 -   Choose the `DataTypes Process`
@@ -168,7 +168,7 @@ An example for how to use the [DataTypesBuilder Operation](https://github.com/ph
 
 ### Class Builder
 
-An example for how to use the [ClassBuilder Operation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/cls/MTConnect/BO/ClassBuilder.cls) to create MTConnect Class from a MTConnect [Probe](http://mtconnect.mazakcorp.com:5609/probe) and [Current](http://mtconnect.mazakcorp.com:5609/current) file.
+An example for how to use the [ClassBuilder Operation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/BO/ClassBuilder.cls) to create MTConnect Class from a MTConnect [Probe](http://mtconnect.mazakcorp.com:5609/probe) and [Current](http://mtconnect.mazakcorp.com:5609/current) file.
 
 -   From the _category_ dropdown menu choose `Class Builder`
 -   Choose the `Class Builder Process`
