@@ -2,19 +2,23 @@
 
 ---
 
-## [v0.0.3](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.3) (2023-1-23)
+## [v0.0.4](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.4) (2023-2-9)
+
+-   Packed for _ZPM_
+
+## v0.0.3 (2023-1-23)
 
 -   Bug fixes
--   [MTConnect.DataTypes](cls/MTConnect/DataTypes) added
--   [MTConnect.DataTypesBuilder](cls\MTConnect\DataTypesBuilder.cls) / [Operation](cls\MTConnect\BO\DataTypesBuilderOperation.cls) can build _%Integer_ datatypes now
+-   [MTConnect.DataTypes](https://github.com/phil1436/MTConnect-ObjectScript/tree/master/src/cls/MTConnect/DataTypes) added
+-   [MTConnect.DataTypesBuilder](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/DataTypesBuilder.cls) / [Operation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/BO/DataTypesBuilderOperation.cls) can build _%Integer_ datatypes now
 
 ---
 
 ## v0.0.2 (2023-1-12)
 
--   [DataTypesBuilderOperation](cls/MTConnect/BO/DataTypesBuilderOperation.cls) throws an error if the class already exists
--   In [MTConnectRequest](cls/MTConnect/MSG/MTConnectRequest.cls) / [Response](cls/MTConnect/MSG/MTConnectResponse.cls) removed Property: `logClass`
--   [ExampleProduction](cls/MTConnect/ExampleProduction) added
+-   [DataTypesBuilderOperation](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/BO/DataTypesBuilderOperation.cls) throws an error if the class already exists
+-   In [MTConnectRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/MTConnectRequest.cls) / [Response](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/MTConnectResponse.cls) removed Property: `logClass`
+-   [ExampleProduction](https://github.com/phil1436/MTConnect-ObjectScript/tree/master/src/cls/MTConnect/ExampleProduction) added
 
 ---
 
