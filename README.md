@@ -197,6 +197,6 @@ An example for how to use the [ClassBuilder Operation](https://github.com/phil14
 
 by Jannis S. & Philipp B.
 
-powered by [InterSystems](https://www.intersystems.com/).
+<!--powered by [InterSystems](https://www.intersystems.com/).
 
-<!--_This application is **not** supported by InterSystems Corporation._-->
+_This application is **not** supported by InterSystems Corporation._-->
