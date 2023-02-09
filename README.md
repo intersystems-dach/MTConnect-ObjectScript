@@ -191,7 +191,7 @@ An example for how to use the [ClassBuilder Operation](https://github.com/phil14
 
 ## [Release Notes](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/CHANGELOG.md)
 
-### [v0.0.3](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.3)
+### [v0.0.4](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.4)
 
 ---
 
