@@ -1,4 +1,4 @@
-<img src = "https://raw.githubusercontent.com/phil1436/MTConnect-ObjectScript/master/resources/logo.png" alt = "Logo" width = "40%"/>
+<img src = "https://raw.githubusercontent.com/phil1436/MTConnect-ObjectScript/master/resources/logo.png" alt = "Logo" width = "50%"/>
 
 # MTConnect-ObjectScript
 
