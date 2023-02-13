@@ -7,6 +7,7 @@ An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docb
 ---
 
 -   [Installation](https://github.com/phil1436/MTConnect-ObjectScript#installation)
+    -   [Installation via InterSystems Package Manager](#installation-via-intersystems-package-manager)
 -   [MTConnect.MSG.MTConnectRequest / Response](https://github.com/phil1436/MTConnect-ObjectScript#mtconnectmsgmtconnectrequest--response)
 -   [MTConnect.BO.ClassBuilder](https://github.com/phil1436/MTConnect-ObjectScript#mtconnectboclassbuilder)
 -   [MTConnect.MSG.CreateDataTypeRequest](https://github.com/phil1436/MTConnect-ObjectScript#mtconnectmsgcreatedatatyperequest)
@@ -205,6 +206,7 @@ An example for how to use the [ClassBuilder Operation](https://github.com/phil14
 ---
 
 View on [InterSystems Open Exchange](https://openexchange.intersystems.com/package/MTConnect-ObjectScript).
+
 View the related article on [InterSystems Developer Community](https://community.intersystems.com/post/mtconnect-objectscript-implementation).
 
 ---
