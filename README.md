@@ -32,6 +32,15 @@ An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docb
 
 <img src="https://raw.githubusercontent.com/phil1436/MTConnect-ObjectScript/master/resources/ImportClassesScreenshot.png" title ="ImportClassesScreenshot" width = "60%"/>
 
+### Installation via InterSystems Package Manager
+
+-   Make sure you have the [InterSystems Package Manager](https://github.com/intersystems/ipm) installed.
+-   Then run the following command in the InterSystems terminal:
+
+```bash
+zpm "install mtconnect-objectscript"
+```
+
 ---
 
 ## [MTConnect.MSG.MTConnectRequest](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/MTConnectRequest.cls) / [Response](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/src/cls/MTConnect/MSG/MTConnectResponse.cls)
@@ -192,6 +201,11 @@ An example for how to use the [ClassBuilder Operation](https://github.com/phil14
 ## [Release Notes](https://github.com/phil1436/MTConnect-ObjectScript/blob/master/CHANGELOG.md)
 
 ### [v0.0.4](https://github.com/phil1436/MTConnect-ObjectScript/tree/0.0.4)
+
+---
+
+View on [InterSystems Open Exchange](https://openexchange.intersystems.com/package/MTConnect-ObjectScript).
+View the related article on [InterSystems Developer Community](https://community.intersystems.com/post/mtconnect-objectscript-implementation).
 
 ---
 
