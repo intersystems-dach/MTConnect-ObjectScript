@@ -1,8 +1,26 @@
-<img src = "https://raw.githubusercontent.com/phil1436/MTConnect-ObjectScript/master/resources/logo.png" alt = "Logo" width = "50%"/>
+<div align="center">
+    <br />
+    <img src="https://raw.githubusercontent.com/phil1436/MTConnect-ObjectScript/master/resources/logo.png" alt="OwnObjectScriptExtensionLogo" width="40%"/>
+    <h1>MTConnect-ObjectScript</h1>
+    <p>
+    An <a href="https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GCOS_INTRO">InterSystems ObjectScript</a> implementation, thats builds an ObjectScript Class based on a <a href="https://www.mtconnect.org/">MTConnect</a> probe file and adds data from a current file.
+    </p>
+</div>
 
-# MTConnect-ObjectScript
-
-An [InterSystems ObjectScript](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GCOS_INTRO) implementation, thats builds an ObjectScript Class based on a [MTConnect](https://www.mtconnect.org/) probe file and adds data from a current file.
+<div align="center">
+    <a href="https://github.com/phil1436/MTConnect-ObjectScript/releases">
+        <img src= "https://img.shields.io/github/v/release/phil1436/MTConnect-ObjectScript?display_name=tag" alt="current release">
+    </a>
+    <a href="https://github.com/phil1436/MTConnect-ObjectScript/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/phil1436/MTConnect-ObjectScript" alt="license">
+    </a>
+    <a href="https://github.com/phil1436/MTConnect-ObjectScript/stargazers">
+        <img src="https://img.shields.io/github/stars/phil1436/MTConnect-ObjectScript" alt="stars">
+    </a>
+    <a href="https://github.com/phil1436/MTConnect-ObjectScript/commits/master">
+        <img src="https://img.shields.io/github/last-commit/phil1436/MTConnect-ObjectScript" alt="last commit">
+    </a>
+</div>
 
 ---
 
@@ -211,7 +229,7 @@ View the related article on [InterSystems Developer Community](https://community
 
 ---
 
-by Jannis S. & Philipp B.
+by [Jannis S.](https://github.com/jstegman-isc) & [Philipp B.](https://github.com/phil1436)
 
 <!--powered by [InterSystems](https://www.intersystems.com/).
 
