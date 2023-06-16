@@ -40,7 +40,7 @@ http://mtconnect.mazakcorp.com:5609/probe" LogTraceEvents="false" Schedule="">
     <Setting Target="Adapter" Name="URL">http://mtconnect.mazakcorp.com:5609/probe</Setting>
     <Setting Target="Adapter" Name="method">GET</Setting>
   </Item>
-  <Item Name="Ens.Alerting.AlertMonitor" Category="" ClassName="Ens.Alerting.AlertMonitor" PoolSize="1" Enabled="false" Foreground="false" Comment="sdsdgf" LogTraceEvents="false" Schedule="">
+  <Item Name="Ens.Alerting.AlertMonitor" Category="" ClassName="Ens.Alerting.AlertMonitor" PoolSize="1" Enabled="false" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
   </Item>
 </Production>
 }
