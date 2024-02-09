@@ -246,7 +246,7 @@ http://localhost:42773/terminal/
 
 ## [Release Notes](https://github.com/intersystems-dach/MTConnect-ObjectScript/blob/master/CHANGELOG.md)
 
-### [v0.0.4](https://github.com/intersystems-dach/MTConnect-ObjectScript/tree/0.0.4)
+### [v0.0.5](https://github.com/intersystems-dach/MTConnect-ObjectScript/tree/0.0.5)
 
 ---
 
