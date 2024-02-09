@@ -4,7 +4,7 @@
 
 ## v0.0.5 (2024-2-9)
 
--   Packed for _Docker support  + inital :alias _
+-   Packed for *Docker support  + inital :alias*
 
 ---
 
