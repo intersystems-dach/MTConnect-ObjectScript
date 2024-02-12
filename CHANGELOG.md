@@ -2,7 +2,13 @@
 
 ---
 
-## [v0.0.4](https://github.com/intersystems-dach/MTConnect-ObjectScript/tree/0.0.4) (2023-2-9)
+## v0.0.5 (2024-2-9)
+
+-   Packed for _Docker_ support  + initial :alias
+
+---
+
+## v0.0.4 (2023-2-9)
 
 -   Packed for _ZPM_
 
