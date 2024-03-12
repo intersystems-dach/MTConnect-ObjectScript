@@ -20,7 +20,7 @@ Method GetData(pRequest As Ens.Request, Output pResponse As Ens.StringResponse) 
   	    $$$TRACE("tHttpResponse.Data:"_tHttpResponse.Data)
   	    $$$TRACE("tHttpResponse:"_tHttpResponse)
   	    Set pResponse.StringValue=tHttpResponse.Data.Read()
-  	    $$$TRACE("tResult: "_pResponse.restResponse)
+  	    $$$TRACE("tResult: "_pResponse.StringValue)
   	    
   	    //set tResponse = ##class(%DynamicObject).%FromJSON(pResponse.restResponse)
   	    
@@ -39,4 +39,3 @@ XData MessageMap
 }
 
 }
-
